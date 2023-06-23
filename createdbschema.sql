@@ -10,13 +10,21 @@ CREATE TABLE IF NOT EXISTS customers (
 	lname VARCHAR(20) NOT NULL,
     age INT NOT NULL 
     );
+    
 DROP TABLE IF EXISTS orders;
 
 CREATE TABLE IF NOT EXISTS orders (
 	order_id INT PRIMARY KEY AUTO_INCREMENT,
     fk_cust_id INT NOT NULL,
     FOREIGN KEY (fk_cust_id) REFERENCES customers(cust_id)
-    )
+    );
 
-DESCRIBE orders;
+DROP TABLES IF EXISTS products;
+
+CREATE TABLE IF NOT EXISTS products (
+	product_id INT PRIMARY KEY AUTO_INCREMENT,
+    pname VARCHAR(20) NOT NULL,
+    prod_price SMALLINT NOT NULL,
+    );
+    
     
