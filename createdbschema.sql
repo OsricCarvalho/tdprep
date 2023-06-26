@@ -1,7 +1,7 @@
 Create database IF NOT EXISTS gamesdb;
 
 use gamesdb;
-
+DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customers;
 
 CREATE TABLE IF NOT EXISTS customers (
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS customers (
     age INT NOT NULL 
     );
     
-DROP TABLE IF EXISTS orders;
+
 
 CREATE TABLE IF NOT EXISTS orders (
 	order_id INT PRIMARY KEY AUTO_INCREMENT,
